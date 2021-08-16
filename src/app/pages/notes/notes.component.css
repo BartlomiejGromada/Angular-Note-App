@@ -1,0 +1,27 @@
+.row {
+  margin: 50px auto;
+  text-align: justify;
+}
+
+.card-title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.card-content {
+  color: #311b92;
+}
+
+.card-action > a {
+  color: #ea80fc !important;
+  cursor: pointer;
+}
+
+.card-action > a:hover {
+  color: #e040fb !important;
+  font-weight: bold;
+}
+
+.card-action i {
+  vertical-align: -6px !important;
+}

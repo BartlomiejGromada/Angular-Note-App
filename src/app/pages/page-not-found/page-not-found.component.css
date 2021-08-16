@@ -1,0 +1,8 @@
+a {
+  font-size: 20px;
+  color: #311b92;
+}
+
+a:hover {
+  font-weight: bold;
+}

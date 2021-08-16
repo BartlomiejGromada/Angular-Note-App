@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row" *ngIf="notes!.length === 0">
+    <div class="col s12 m12">
+      <div class="card #ffcdd2 red lighten-4">
+        <div class="card-content">
+          <span class="card-title">No Notes</span>
+          <i class="large material-icons">sentiment_dissatisfied</i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ngFor="let note of notes">
+    <div class="col s12 m12">
+      <div
+        [@simpleFadeAnimation]="'in'"
+        class="
+          card
+          #b388ff #b388ff
+          #651fff
+          #311b92
+          #ede7f6
+          deep-purple
+          lighten-5
+        "
+      >
+        <div class="card-content">
+          <span class="card-title">{{ note.title }}</span>
+          <p>
+            {{ note.description }}
+          </p>
+        </div>
+        <div class="card-action">
+          <a [routerLink]="['/edit', note.id]"
+            ><i class="material-icons">edit</i>edit</a
+          >
+          <a (click)="removeNote(note.id)"
+            ><i class="material-icons">delete</i>delete</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

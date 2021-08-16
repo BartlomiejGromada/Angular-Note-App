@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 50px auto;
+  position: relative;
+  text-align: center;
+}
+
+.block {
+  margin: 10px;
+}
+
+#svg-image_note {
+  margin-top: 30px;
+}

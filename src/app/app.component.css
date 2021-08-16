@@ -1,0 +1,21 @@
+.brand-logo {
+  padding: 0px 10px;
+}
+
+li > a {
+  color: white;
+}
+
+#first-item {
+  margin-top: 10px;
+}
+
+.active-link {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ea80fc !important;
+}
+
+.active-link-image {
+  color: #ea80fc !important;
+}
