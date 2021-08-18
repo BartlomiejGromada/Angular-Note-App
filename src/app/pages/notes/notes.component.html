@@ -52,6 +52,7 @@
           <a (click)="removeNote(note.id)"
             ><i class="material-icons">delete</i>delete</a
           >
+          <span>{{ note.date | date: "MMM d, y, h:mm" }}</span>
         </div>
       </div>
     </div>

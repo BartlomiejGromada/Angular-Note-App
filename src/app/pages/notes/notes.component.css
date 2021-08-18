@@ -44,3 +44,8 @@
 .input-field .prefix.active {
   color: #ea80fc;
 }
+
+.card-action > span {
+  color: #311b92;
+  font-size: 13px;
+}

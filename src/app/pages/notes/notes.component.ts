@@ -40,7 +40,7 @@ export class NotesComponent implements OnInit {
   getNotes() {
     this.notes = this.notesService
       .getNotes()
-      .sort((note1, note2) => note1.id - note2.id);
+      .sort((note1, note2) => note2.date - note1.date);
     this.fullNotes = this.notes;
   }
 

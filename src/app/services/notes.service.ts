@@ -17,6 +17,7 @@ export class NotesService {
   }
 
   addNote(note: Note): void {
+    note.date = Date.now();
     let notes = this.getNotes();
     note.id = notes.length + 1;
     notes.push(note);
