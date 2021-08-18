@@ -29,6 +29,7 @@ import {
 })
 export class NotesComponent implements OnInit {
   notes: Note[] = [];
+  fullNotes: Note[] = [];
 
   constructor(private notesService: NotesService) {}
 
@@ -40,10 +41,21 @@ export class NotesComponent implements OnInit {
     this.notes = this.notesService
       .getNotes()
       .sort((note1, note2) => note1.id - note2.id);
+    this.fullNotes = this.notes;
   }
 
   removeNote(id: number) {
     this.notesService.removeNote(id);
     this.getNotes();
+  }
+
+  filterNotes(text: any) {
+    let query = text.value.toLowerCase().trim();
+
+    query !== ''
+      ? (this.notes = this.fullNotes.filter((note) =>
+          note.title.toLowerCase().includes(query)
+        ))
+      : (this.notes = this.notesService.getNotes());
   }
 }
